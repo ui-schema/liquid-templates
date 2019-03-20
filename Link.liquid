@@ -1,7 +1,7 @@
 <a
     data-schema="http://uischema.org/Link"
-    href="{{ data.href }}"
-    target="{% if data.openNew %}_blank{% else %}_self{% endif %}"
+    href="{{ self.href }}"
+    target="{% if self.openNew %}_blank{% else %}_self{% endif %}"
 >
-    {{ data.text }}
+    {{ self.text }}
 </a>
