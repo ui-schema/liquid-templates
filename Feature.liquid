@@ -1,10 +1,10 @@
 <a
-    data-schema="http://uischema.org/Feature"
+    data-schema="uischema.org/Feature"
     href="{{link.href}}"    
     target="{{link.target}}"    
 >
     {% if image %}
-        {% include Image.liquid with image %}
+        {% include 'Image' with image %}
     {% endif %}
     {% if heading %}
         <h3>{{ heading }}</h3>

@@ -1,0 +1,16 @@
+<div
+    data-schema="uischema.org/Carousel"
+>
+    <ul>
+        {% for item in items %}
+            <li>
+                {% include 'Feature' with item %}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <nav>
+        <button>〈</button>
+        <button>〉</button>
+    </nav>
+</div>

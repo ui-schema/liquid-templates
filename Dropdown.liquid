@@ -1,5 +1,5 @@
 <div
-    data-schema="http://uischema.org/Dropdown"
+    data-schema="uischema.org/Dropdown"
 >
     <input
         type="checkbox"
@@ -11,9 +11,9 @@
         {% for option in options %}
             <li>
                 {% if option.@type == 'Link' %}
-                    {% include Link.liquid with option %}
+                    {% include 'Link' with option %}
                 {% elsif option.@type == 'Option' %}
-                    {% include Option.liquid with option %}
+                    {% include 'Option' with option %}
                 {% endif %}
             </li>
         {% endfor %}

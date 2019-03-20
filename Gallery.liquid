@@ -1,7 +1,7 @@
 <div
-    data-schema="http://uischema.org/Gallery"
+    data-schema="uischema.org/Gallery"
 >
     {% for item in items %}
-        {% include Feature.liquid with item %}
+        {% include 'Feature' with item %}
     {% endfor %}
 </div>
