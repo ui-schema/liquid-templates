@@ -1,0 +1,21 @@
+<div
+    data-schema="http://uischema.org/Dropdown"
+>
+    <input
+        type="checkbox"
+    >
+    <label>
+        {{ data.text }}
+    </label>
+    <ul>
+        {% for option in data.options %}
+            <li>
+                {% if option.@type == 'Link' %}
+                    {% include Link.liquid data=option %}
+                {% elif option.@type == 'Option' %}
+                    {% include Option.liquid data=option %}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</div>
