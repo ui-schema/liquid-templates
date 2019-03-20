@@ -5,15 +5,15 @@
         type="checkbox"
     >
     <label>
-        {{ self.text }}
+        {{ text }}
     </label>
     <ul>
-        {% for option in self.options %}
+        {% for option in options %}
             <li>
                 {% if option.@type == 'Link' %}
-                    {% include Link.liquid data=option %}
-                {% elif option.@type == 'Option' %}
-                    {% include Option.liquid data=option %}
+                    {% include Link.liquid with option %}
+                {% elsif option.@type == 'Option' %}
+                    {% include Option.liquid with option %}
                 {% endif %}
             </li>
         {% endfor %}

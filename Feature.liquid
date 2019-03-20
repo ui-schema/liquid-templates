@@ -1,18 +1,18 @@
 <a
     data-schema="http://uischema.org/Feature"
-    href="{{self.link.href}}"    
-    target="{{self.link.target}}"    
+    href="{{link.href}}"    
+    target="{{link.target}}"    
 >
-    {% if self.image %}
-        {% include Image.liquid data=self.image %}
+    {% if image %}
+        {% include Image.liquid with image %}
     {% endif %}
-    {% if self.heading %}
-        <h3>{{ self.heading }}</h3>
+    {% if heading %}
+        <h3>{{ heading }}</h3>
     {% endif %}
-    {% if self.subheading %}
-        <h4>{{ self.subheading }}</h4>
+    {% if subheading %}
+        <h4>{{ subheading }}</h4>
     {% endif %}
-    {% if self.body %}
-        <p>{{ self.body }}</p>
+    {% if body %}
+        <p>{{ body }}</p>
     {% endif %}
 </a>
