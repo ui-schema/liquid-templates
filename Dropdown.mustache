@@ -1,0 +1,17 @@
+<div
+    data-schema="uischema.org/Dropdown"
+>
+    <input
+        type="checkbox"
+    >
+    <label>
+        {{ text }}
+    </label>
+    <ul>
+        {{ #options }}
+            <li>
+                {{> Link }}
+            </li>
+        {{ /options }}
+    </ul>
+</div>

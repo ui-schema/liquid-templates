@@ -2,11 +2,11 @@
     data-schema="uischema.org/Carousel"
 >
     <ul>
-        {% for item in items %}
+        {{# items }}
             <li>
-                {% include 'Feature' with item %}
+                {{> Feature }}
             </li>
-        {% endfor %}
+        {{/ items }}
     </ul>
 
     <nav>
