@@ -1,21 +1,26 @@
 <a
     data-schema="uischema.org/Feature"
+    class="ui-feature"
     href="{{ link.href }}"    
-    target="{{ link.target }}"    
+    target="{{ link.target }}"
 >
-    {{# image }}
-        {{> Image }}
-    {{/ image }}
+    <div class="ui-feature-image">
+        {{# image }}
+            {{> Image }}
+        {{/ image }}
+    </div>
 
-    {{# heading }}
-        <h3>{{ heading }}</h3>
-    {{/ heading }}
-    
-    {{# subheading }}
-        <h4>{{ subheading }}</h4>
-    {{/ subheading }}}
-    
-    {{# body }}
-        <p>{{ body }}</p>
-    {{/ endif }}
+    <div class="ui-feature-details">
+        {{# heading }}
+            <div class="ui-feature-heading">{{ . }}<div>
+        {{/ heading }}
+        
+        {{# subheading }}
+            <div class="ui-feature-subheading">{{ . }}</div>
+        {{/ subheading }}}
+        
+        {{# body }}
+            <div class="ui-feature-body">{{ . }}</div>
+        {{/ endif }}
+    </details>
 </a>

@@ -1,16 +1,17 @@
 <div
     data-schema="uischema.org/Carousel"
+    class="ui-carousel"
 >
-    <ul>
+    <ul class="ui-carousel-track">
         {{# items }}
-            <li>
+            <li class="ui-carousel-cell">
                 {{> Feature }}
             </li>
         {{/ items }}
     </ul>
 
-    <nav>
-        <button>〈</button>
-        <button>〉</button>
+    <nav class="ui-carousel-nav">
+        <button class="ui-carousel-prev">〈</button>
+        <button class="ui-carousel-next">〉</button>
     </nav>
 </div>

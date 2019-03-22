@@ -1,15 +1,20 @@
 <div
     data-schema="uischema.org/Dropdown"
+    class="ui-dropdown"
 >
     <input
         type="checkbox"
+        class="ui-dropdown-trigger"
     >
-    <label>
+    <label class="ui-dropdown-text">
         {{ text }}
     </label>
-    <ul>
+    <ul class="ui-dropdown-options">
+        {{ #canSearch }}
+            <input type="search" class="ui-dropdown-search">
+        {{ /canSearch }}
         {{ #options }}
-            <li>
+            <li class="ui-dropdown-option">
                 {{> Link }}
             </li>
         {{ /options }}
