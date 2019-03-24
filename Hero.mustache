@@ -1,0 +1,25 @@
+<div data-ui-schema="uischema.org/Hero" class="ui-hero" data-ui-id="{{ @id }}">
+    {{# image }}
+        <div class="ui-hero-image">{{> Image }}</div>
+    {{/ image }}
+
+    <div class="ui-container">
+        {{# heading }}
+            <h1 class="ui-hero-heading">{{ . }}</h1>
+        {{/ heading }}
+        
+        {{# subheading }}
+            <h2 class="ui-hero-subheading">{{ . }}</h2>
+        {{/ subheading }}
+
+        <div class="ui-hero-details">
+            {{# body }}
+                <div class="ui-hero-body">{{{ . }}}</div>
+            {{/ body }}
+
+            {{# link }}
+                {{> Link }}
+            {{/ link }}
+        </div>
+    </div>
+</div>
