@@ -1,4 +1,4 @@
-<div data-ui-schema="uischema.org/Feature" class="ui-feature" data-ui-id="{{ @id }}">
+<div data-ui-schema="uischema.org/Feature" class="ui-feature">
     <div class="ui-feature-image">
         {{# image }}
             {{> Image }}
@@ -19,7 +19,7 @@
         {{/ body }}
 
         {{# link }}
-            {{> Link }}
+            <div class="ui-feature-link">{{> Link }}</div>
         {{/ link }}
     </div>
 </div>

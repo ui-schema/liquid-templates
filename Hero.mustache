@@ -1,15 +1,15 @@
-<div data-ui-schema="uischema.org/Hero" class="ui-hero" data-ui-id="{{ @id }}">
+<section data-ui-schema="uischema.org/Hero" class="ui-hero">
     {{# image }}
         <div class="ui-hero-image">{{> Image }}</div>
     {{/ image }}
 
     <div class="ui-container">
         {{# heading }}
-            <h1 class="ui-hero-heading">{{ . }}</h1>
+            <h2 class="ui-hero-heading">{{ . }}</h2>
         {{/ heading }}
         
         {{# subheading }}
-            <h2 class="ui-hero-subheading">{{ . }}</h2>
+            <h3 class="ui-hero-subheading">{{ . }}</h3>
         {{/ subheading }}
 
         <div class="ui-hero-details">
@@ -18,8 +18,8 @@
             {{/ body }}
 
             {{# link }}
-                {{> Link }}
+                <div class="ui-hero-link">{{> Link }}</div>
             {{/ link }}
         </div>
     </div>
-</div>
+</section>
