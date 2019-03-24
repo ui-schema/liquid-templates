@@ -1,4 +1,4 @@
-<a data-ui-schema="uischema.org/Feature" class="ui-feature" data-ui-id="{{ @id }}" href="{{ link.href }}" target="{{ link.target }}">
+<div data-ui-schema="uischema.org/Feature" class="ui-feature" data-ui-id="{{ @id }}">
     <div class="ui-feature-image">
         {{# image }}
             {{> Image }}
@@ -7,15 +7,19 @@
 
     <div class="ui-feature-details">
         {{# heading }}
-            <div class="ui-feature-heading">{{ . }}<div>
+            <div class="ui-feature-heading">{{ . }}</div>
         {{/ heading }}
         
         {{# subheading }}
             <div class="ui-feature-subheading">{{ . }}</div>
-        {{/ subheading }}}
+        {{/ subheading }}
         
         {{# body }}
-            <div class="ui-feature-body">{{ . }}</div>
-        {{/ endif }}
-    </details>
-</a>
+            <div class="ui-feature-body">{{{ . }}}</div>
+        {{/ body }}
+
+        {{# link }}
+            {{> Link }}
+        {{/ link }}
+    </div>
+</div>

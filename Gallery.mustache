@@ -1,5 +1,21 @@
-<div data-ui-schema="uischema.org/Gallery" class="ui-gallery" data-ui-id="{{ @id }}">
-    {{# items }}
-        {{> Feature }}
-    {{/ items }}
+<div data-ui-schema="uischema.org/Gallery" class="ui-gallery {{# useSquares }}square{{/ useSquares }}" data-ui-id="{{ @id }}">
+    <div class="ui-container">
+        {{# heading }}
+            <h2 class="ui-gallery-heading">{{ . }}</h2>
+        {{/ heading }}
+        
+        {{# subheading }}
+            <h3 class="ui-gallery-subheading">{{ . }}</h3>
+        {{/ subheading }}
+        
+        {{# body }}
+            <div class="ui-gallery-body">{{{ . }}}</div>
+        {{/ body }}
+
+        <div class="ui-gallery-items">
+            {{# items }}
+                {{> Feature }}
+            {{/ items }}
+        </div>
+    </div>
 </div>
