@@ -1,29 +1,29 @@
 <{{# options.isHeader }}header{{/ options.isHeader  }}{{^ options.isHeader }}section{{/ options.isHeader }} data-ui-schema="uischema.org/Hero" class="ui-hero">
     {{# image }}
-        <div class="ui-hero-image">{{> Image }}</div>
+        <div class="ui-hero__image">{{> Image }}</div>
     {{/ image }}
 
     <div class="ui-container">
         {{# heading }}
             {{# options.isHeader }}
-                <h1 class="ui-hero-heading">{{ . }}</h1>
+                <h1 class="ui-hero__heading">{{ . }}</h1>
             {{/ options.isHeader }}
             {{^ options.isHeader }}
-                <h2 class="ui-hero-heading">{{ . }}</h2>
+                <h2 class="ui-hero__heading">{{ . }}</h2>
             {{/ options.isHeader }}
         {{/ heading }}
         
         {{# subheading }}
-            <h3 class="ui-hero-subheading">{{ . }}</h3>
+            <h3 class="ui-hero__subheading">{{ . }}</h3>
         {{/ subheading }}
 
-        <div class="ui-hero-details">
+        <div class="ui-hero__details">
             {{# body }}
-                <div class="ui-hero-body">{{{ . }}}</div>
+                <div class="ui-hero__body">{{{ . }}}</div>
             {{/ body }}
 
             {{# link }}
-                <div class="ui-hero-link">{{> Link }}</div>
+                <div class="ui-hero__link">{{> Link }}</div>
             {{/ link }}
         </div>
     </div>

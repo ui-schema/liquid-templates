@@ -1,21 +1,21 @@
 <section data-ui-schema="uischema.org/Gallery" class="ui-gallery{{# options }}{{# useCoverLinks }} use-cover-links{{/ useCoverLinks }}{{# useSquares }} use-squares{{/ useSquares }}{{/ options }}">
     <div class="ui-container">
         {{# heading }}
-            <h2 class="ui-gallery-heading">{{ . }}</h2>
+            <h2 class="ui-gallery__heading">{{ . }}</h2>
         {{/ heading }}
         
         {{# subheading }}
-            <h3 class="ui-gallery-subheading">{{ . }}</h3>
+            <h3 class="ui-gallery__subheading">{{ . }}</h3>
         {{/ subheading }}
         
         {{# body }}
-            <div class="ui-gallery-body">{{{ . }}}</div>
+            <div class="ui-gallery__body">{{{ . }}}</div>
         {{/ body }}
     </div>
 
-    <div class="ui-gallery-items">
+    <div class="ui-gallery__items">
         {{# items }}
-            <div class="ui-gallery-item">{{> Feature }}</div>
+            <div class="ui-gallery__item">{{> Feature }}</div>
         {{/ items }}
     </div>
 </section>

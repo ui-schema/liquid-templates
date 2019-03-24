@@ -1,25 +1,25 @@
 <div data-ui-schema="uischema.org/Feature" class="ui-feature">
-    <div class="ui-feature-image">
+    <div class="ui-feature__image">
         {{# image }}
             {{> Image }}
         {{/ image }}
     </div>
 
-    <div class="ui-feature-details">
+    <div class="ui-feature__details">
         {{# heading }}
-            <h3 class="ui-feature-heading">{{ . }}</h3>
+            <h3 class="ui-feature__heading">{{ . }}</h3>
         {{/ heading }}
         
         {{# subheading }}
-            <h4 class="ui-feature-subheading">{{ . }}</h4>
+            <h4 class="ui-feature__subheading">{{ . }}</h4>
         {{/ subheading }}
         
         {{# body }}
-            <div class="ui-feature-body">{{{ . }}}</div>
+            <div class="ui-feature__body">{{{ . }}}</div>
         {{/ body }}
 
         {{# link }}
-            <div class="ui-feature-link">{{> Link }}</div>
+            <div class="ui-feature__link">{{> Link }}</div>
         {{/ link }}
     </div>
 </div>
