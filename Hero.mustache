@@ -1,11 +1,16 @@
-<section data-ui-schema="uischema.org/Hero" class="ui-hero">
+<{{# options.isHeader }}header{{/ options.isHeader  }}{{^ options.isHeader }}section{{/ options.isHeader }} data-ui-schema="uischema.org/Hero" class="ui-hero">
     {{# image }}
         <div class="ui-hero-image">{{> Image }}</div>
     {{/ image }}
 
     <div class="ui-container">
         {{# heading }}
-            <h2 class="ui-hero-heading">{{ . }}</h2>
+            {{# options.isHeader }}
+                <h1 class="ui-hero-heading">{{ . }}</h1>
+            {{/ options.isHeader }}
+            {{^ options.isHeader }}
+                <h2 class="ui-hero-heading">{{ . }}</h2>
+            {{/ options.isHeader }}
         {{/ heading }}
         
         {{# subheading }}

@@ -1,4 +1,4 @@
-<section data-ui-schema="uischema.org/Gallery" class="ui-gallery {{# useSquares }}square{{/ useSquares }}">
+<section data-ui-schema="uischema.org/Gallery" class="ui-gallery{{# options }}{{# useCoverLinks }} use-cover-links{{/ useCoverLinks }}{{# useSquares }} use-squares{{/ useSquares }}{{/ options }}">
     <div class="ui-container">
         {{# heading }}
             <h2 class="ui-gallery-heading">{{ . }}</h2>
@@ -15,7 +15,7 @@
 
     <div class="ui-gallery-items">
         {{# items }}
-            {{> Feature }}
+            <div class="ui-gallery-item">{{> Feature }}</div>
         {{/ items }}
     </div>
 </section>

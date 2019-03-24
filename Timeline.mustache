@@ -1,0 +1,27 @@
+<section data-ui-schema="uischema.org/Timeline" class="ui-timeline">
+    <div class="ui-container">
+        {{# heading }}
+            <h2 class="ui-timeline-heading">{{ . }}</h2>
+        {{/ heading }}
+        
+        {{# subheading }}
+            <h3 class="ui-timeline-subheading">{{ . }}</h3>
+        {{/ subheading }}
+        
+        {{# body }}
+            <div class="ui-timeline-body">{{{ . }}}</div>
+        {{/ body }}
+        
+        <div class="ui-timeline-items">
+            {{# items }}
+                <div class="ui-timeline-item">
+                    {{> Feature }}
+                </div>
+            {{/ items }}
+            
+            {{# link }}
+                <div class="ui-timeline-link">{{> Link }}</div>
+            {{/ link }}
+        </div>
+    </div>
+</section>
