@@ -1,4 +1,4 @@
-<section data-ui-schema="uischema.org/Gallery" class="ui-gallery{{# options }}{{# isCarousel }} is-carousel{{/ isCarousel }}{{# useCoverLinks }} use-cover-links{{/ useCoverLinks }}{{# useSquares }} use-squares{{/ useSquares }}{{/ options }}">
+<section data-ui-schema="uischema.org/Gallery" class="ui-gallery{{# options }}{{# isCarousel }} is-carousel{{/ isCarousel }}{{# useCoverLinks }} use-cover-links{{/ useCoverLinks }}{{# useSquares }} use-squares{{/ useSquares }}{{# columns }} columns-{{ . }}{{/ columns }}{{/ options }}">
     <div class="ui-container">
         {{# heading }}
             <h2 class="ui-gallery__heading">{{ . }}</h2>
@@ -13,7 +13,7 @@
         {{/ body }}
     </div>
 
-    <div class="ui-gallery__items">
+    <div class="ui-gallery__items{{# options.isContained }} ui-container{{/ options.isContained }}">
         {{# items }}
             <div class="ui-gallery__item">{{> Feature }}</div>
         {{/ items }}
