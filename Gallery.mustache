@@ -1,4 +1,4 @@
-<section data-ui-schema="uischema.org/Gallery" class="ui-gallery{{# options }}{{# isCarousel }} is-carousel{{/ isCarousel }}{{# useCoverLinks }} use-cover-links{{/ useCoverLinks }}{{# useSquares }} use-squares{{/ useSquares }}{{# columns }} columns-{{ . }}{{/ columns }}{{/ options }}">
+<section data-ui-schema="uischema.org/Gallery" class="ui-gallery{{# options }}{{# isCarousel }} is-carousel{{/ isCarousel }}{{# isGrid }} is-grid{{/ isGrid }}{{# useCoverLinks }} use-cover-links{{/ useCoverLinks }}{{# useSquares }} use-squares{{/ useSquares }}{{# columns }} {{# xs }} columns-xs-{{ . }}{{/ xs }}{{# sm }} columns-sm-{{ . }}{{/ sm }}{{# md }} columns-md-{{ . }}{{/ md }}{{# lg }} columns-lg-{{ . }}{{/ lg }}{{# xl }} columns-xl-{{ . }}{{/ xl }}{{/ columns }}{{/ options }}">
     <div class="ui-container">
         {{# heading }}
             <h2 class="ui-gallery__heading">{{ . }}</h2>
