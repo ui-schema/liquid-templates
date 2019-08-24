@@ -20,7 +20,7 @@
         {{/ subheading }}
 
         {{# body }}
-            <div class="ui-hero__body">{{ . }}</div>
+            <div class="ui-hero__body">{{{ . }}}</div>
         {{/ body }}
 
         {{# link }}

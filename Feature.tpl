@@ -10,7 +10,7 @@
             {{/ subheading }}
 
             {{# body }}
-                <div class="ui-feature__body">{{ . }}</div>
+                <div class="ui-feature__body">{{{ . }}}</div>
             {{/ body }}
 
             {{# link }}
