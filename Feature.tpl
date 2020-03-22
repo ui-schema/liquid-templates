@@ -1,11 +1,11 @@
 <div data-ui-schema="uischema.org/Feature" class="ui-feature{{^ image }} no-image{{/ image }}">
     <div class="ui-feature__details">
         {{# heading }}
-            <h2 class="ui-feature__heading">{{ . }}</h2>
+            <h3 class="ui-feature__heading">{{ . }}</h3>
         {{/ heading }}
         
         {{# subheading }}
-            <h3 class="ui-feature__subheading">{{ . }}</h3>
+            <h4 class="ui-feature__subheading">{{ . }}</h4>
         {{/ subheading }}
 
         {{# body }}
