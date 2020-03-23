@@ -14,8 +14,28 @@
     </div>
 
     <div class="ui-feature-collection__items{{# options.isContained }} ui-container ui-feature-collection__container{{/ options.isContained }}">
-        {{# items }}
-            <div class="ui-feature-collection__item">{{> Feature }}</div>
-        {{/ items }}
+        {{# items.itemListElement }}
+            <div class="ui-feature-collection__item">
+                {{# item.image }} 
+                    <div class="ui-feature-collection__item__image">
+                        <img class="ui-feature-collection__item__image__source" src="{{ contentUrl }}" alt="{{ caption }}">
+                    </div>
+                {{/ item.image }}
+                
+                <div class="ui-feature-collection__item__details">
+                    {{# item.heading }}
+                        <h3 class="ui-feature-collection__item__heading">{{ . }}</h3>
+                    {{/ item.heading }}
+
+                    {{# item.body }}
+                        <div class="ui-feature-collection__item__body">{{{ . }}}</div>
+                    {{/ item.body }}
+
+                    {{# item.link }}
+                        <a class="ui-feature-collection__item__link" href="{{ href }}" target="{{ target }}">{{ text }}</a>
+                    {{/ item.link }}
+                </div>
+            </div>
+        {{/ items.itemListElement }}
     </div>
 </section>

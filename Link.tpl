@@ -1,1 +1,0 @@
-<a data-ui-schema="uischema.org/Link" href="{{ href }}" {{# openNew }}target="_blank"{{/ openNew }}>{{ text }}</a>

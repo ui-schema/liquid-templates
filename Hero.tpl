@@ -1,6 +1,8 @@
-<{{# options.isHeader }}header{{/ options.isHeader  }}{{^ options.isHeader }}section{{/ options.isHeader }} data-ui-schema="uischema.org/Hero" class="ui-hero">
+<div class="ui-hero">
     {{# image }}
-        <div class="ui-hero__image">{{> Image }}</div>
+        <div class="ui-hero__media">
+            <img class="ui-hero__media__source" alt="{{ caption }}" src="{{ contentUrl }}">
+        </div>
     {{/ image }}
 
     <div class="ui-container ui-hero__container">
@@ -24,7 +26,7 @@
         {{/ body }}
 
         {{# link }}
-            <div class="ui-hero__link">{{> Link }}</div>
+            <a class="ui-hero__link" href="{{ href }}" target="{{ target }}">{{ text }}</a>
         {{/ link }}
     </div>
-</{{# options.isHeader }}header{{/ options.isHeader  }}{{^ options.isHeader }}section{{/ options.isHeader }}>
+</div>
