@@ -13,29 +13,29 @@
         {{/ body }}
         
         <div class="ui-feature-chain__items">
-            {{# items.itemListElement }}
+            {{# items }}
                 <div class="ui-feature-chain__item">
-                    {{# item.image }} 
+                    {{# image }} 
                         <div class="ui-feature-chain__item__image">
                             <img class="ui-feature-chain__item__image__source" src="{{ contentUrl }}" alt="{{ caption }}">
                         </div>
-                    {{/ item.image }}
+                    {{/ image }}
                     
                     <div class="ui-feature-chain__item__details">
-                        {{# item.heading }}
+                        {{# heading }}
                             <h3 class="ui-feature-chain__item__heading">{{ . }}</h3>
-                        {{/ item.heading }}
+                        {{/ heading }}
 
-                        {{# item.body }}
+                        {{# body }}
                             <div class="ui-feature-chain__item__body">{{{ . }}}</div>
-                        {{/ item.body }}
+                        {{/ body }}
 
-                        {{# item.link }}
+                        {{# link }}
                             <a class="ui-feature-chain__item__link" href="{{ href }}" target="{{ target }}">{{ text }}</a>
-                        {{/ item.link }}
+                        {{/ link }}
                     </div>
                 </div>
-            {{/ items.itemListElement }}
+            {{/ items }}
             
             {{# link }}
                 <a class="ui-feature-chain__link" href="{{ href }}" target="{{ target }}">{{ text }}</a>

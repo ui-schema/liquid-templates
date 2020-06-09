@@ -1,4 +1,4 @@
-<section data-ui-schema="uischema.org/Highlight" class="ui-highlight{{^ image }} no-image{{/ image }}{{# options.useColumns }} use-columns{{/ options.useColumns }}">
+<section class="ui-highlight {{# alignment }}-{{ . }}{{/ alignment }}">
     <div class="ui-container ui-highlight__container">
         <div class="ui-highlight__details">
             {{# heading }}
@@ -18,8 +18,14 @@
             {{/ link }}
         </div>
     
-        {{# image }}
-            <div class="ui-highlight__image">{{> Image }}</div>
-        {{/ image }}
+        <div class="ui-highlight__media">
+            {{# image }}
+                <img class="ui-highlight__media__source" alt="{{ caption }}" src="{{ contentUrl }}">
+            {{/ image }}
+            
+            {{# video }}
+                <video controls class="ui-highlight__media__source" title="{{ caption }}" src="{{ contentUrl }}" {{# image.contentUrl }}poster="{{ . }}"{{/ image.contentUrl }}>
+            {{/ video }}
+        </div>
     </div>
 </section>
